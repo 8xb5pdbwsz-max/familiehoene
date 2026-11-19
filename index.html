@@ -68,10 +68,7 @@
     address { font-style: normal; font-family: var(--serif); font-size: 20px; line-height: 1.55; }
     address strong { font-weight: 400; color: var(--green); }
     .sep { height: 1px; background: var(--line); margin: 24px 0 20px; }
-    .mail { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
-    .mail svg { flex: none; color: var(--brass); }
-    .mail span { border-bottom: 1px solid transparent; transition: border-color .2s; }
-    a.mail:hover span { border-color: var(--brass); }
+    .note { margin: 0; font-size: 15px; color: var(--muted); }
     .tenant {
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
       margin-top: 20px; padding: 18px 22px;
@@ -111,10 +108,7 @@
         48231 Warendorf
       </address>
       <div class="sep"></div>
-      <a class="mail" id="mail" href="#">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
-        <span>verwaltung [at] familiehoene.de</span>
-      </a>
+      <p class="note">Kontaktaufnahme bitte postalisch. Mieter finden weitere Kontaktmöglichkeiten im geschützten Bereich.</p>
     </section>
 
     <a class="tenant" href="kontakt.html">
@@ -128,13 +122,6 @@
 
   <footer>© Familie Höne · <a href="datenschutz.html">Datenschutz</a></footer>
 
-  <script>
-    // E-Mail-Adresse erst im Browser zusammensetzen (Schutz vor Spam-Bots)
-    document.getElementById('mail').addEventListener('click', function (e) {
-      e.preventDefault();
-      location.href = 'mailto:' + ['verwaltung', 'familiehoene.de'].join('@');
-    });
-  </script>
   <img src="https://famhoene.goatcounter.com/count?p=/" alt="" width="1" height="1" style="position:absolute;left:-9999px">
 </body>
 </html>
